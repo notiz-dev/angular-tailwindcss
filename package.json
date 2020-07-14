@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build:prod": "NODE_ENV=production ng build --prod",
-    "test": "ng test",
+    "start": "ng serve --extra-webpack-config webpack.config.js",
+    "build": "ng build --extra-webpack-config webpack.config.js",
+    "build:prod": "NODE_ENV=production ng build --prod --extra-webpack-config webpack.config.js",
+    "test": "ng test --extra-webpack-config webpack.config.js",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -20,12 +20,12 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "ngx-build-plus": "~9.0.6",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular-builders/custom-webpack": "~10.0.0-beta.0",
     "@angular-devkit/build-angular": "~0.1000.0",
     "@angular/cli": "~10.0.0",
     "@angular/compiler-cli": "~10.0.0",
